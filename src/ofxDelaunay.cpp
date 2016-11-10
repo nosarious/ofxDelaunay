@@ -101,6 +101,11 @@ int ofxDelaunay::triangulate(){
 		triangleMesh.addIndex(verticesTemp.at(triangles[ i ].p3).i);
 	}
 	
+	//erase the last three triangles (missing code from original)
+	vertices.erase(vertices.end()-1);
+	vertices.erase(vertices.end()-1);
+	vertices.erase(vertices.end()-1);
+	
 	return ntri;
 }
 
